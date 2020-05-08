@@ -1,0 +1,40 @@
+.body {
+    color: #323339;
+}
+.navbar {
+    margin: 8px 32px;
+    
+}
+.nav-item  {    
+    color: #323339;
+    font-weight: bold;
+}
+.nav-link:hover {
+    color: #323339;
+}
+.jumbotron {
+    background: image-url("spine.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.h1 {
+    color: #323339;
+}
+
+.h3 {
+    font-weight: bold;
+    color: #323339;
+}
+
+.card {
+    margin-top: 16px;
+    max-width: 320px;
+}
+
+.md-form {
+    margin: auto;
+    width: 70%;
+}
+
