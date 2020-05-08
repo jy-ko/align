@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  capacity: 1
+  centre: one
+  instructor: one
+  date: 2020-05-08 11:18:24
+  title: MyString
+
+two:
+  capacity: 1
+  centre: two
+  instructor: two
+  date: 2020-05-08 11:18:24
+  title: MyString
