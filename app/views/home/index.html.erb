@@ -1,2 +1,43 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="text-right mb-4 mr-3">반가워요, 인희님</h1>
+        <!-- Search form -->
+        <div class="md-form active-purple-2 mb-3">
+        <input class="form-control" type="text" placeholder="Search by topic, location, or centre" aria-label="Search">
+        </div>
+        <h3> Popular workshops near you </h3>
+
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="card mb-3">
+                    <%= image_tag "workshop.jpeg", class:'card-img-top' %>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Modern Pilates</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card mb-3">
+                    <%= image_tag "workshop.jpeg", class:'card-img-top' %>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card mb-3">
+                    <%= image_tag "workshop.jpeg", class:'card-img-top' %>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
