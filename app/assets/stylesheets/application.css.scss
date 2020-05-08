@@ -1,6 +1,12 @@
 .body {
     color: #323339;
 }
+.bg-height {
+    height: 100vh;
+}
+.text-white {
+    color: white;
+}
 .navbar {
     margin: 8px 32px;
     
@@ -30,7 +36,9 @@
 
 .card {
     margin-top: 16px;
-    max-width: 320px;
+    max-width: 400px;
+    margin-right: 16px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.2);
 }
 
 .md-form {
@@ -38,3 +46,6 @@
     width: 70%;
 }
 
+.bg-pink {
+    background-color: #F2AD9F;
+}

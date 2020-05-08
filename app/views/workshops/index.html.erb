@@ -1,2 +1,30 @@
-<h1>Workshops#index</h1>
-<p>Find me in app/views/workshops/index.html.erb</p>
+<div class="bg-pink bg-height">
+    <div class="container pt-5 d-flex justify-content-between">
+        <div class="items-left">
+            <h2 class="text-white">All Workshops</h2>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                    <%= image_tag "workshop.jpeg", class:'card-img' %>
+                    </div>
+                    <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="items-right">
+            <h2 class="text-white">Suggestions</h2>
+                <div class="card mb-3">
+                    <%= image_tag "workshop.jpeg", class:'card-img-top' %>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
