@@ -1,5 +1,7 @@
 class WorkshopsController < ApplicationController
+  before_action :set_workshop, only: [:show, :edit, :update, :destroy ]
   def index
+    @workshops = Workshop.all
   end
 
   def show
@@ -18,5 +20,15 @@ class WorkshopsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def set_workshop
+      @workshop = Workshop.find(params[:id])
+  end
+
+  def workshop_params
+      params.require(:workshop).permit(:title)
   end
 end

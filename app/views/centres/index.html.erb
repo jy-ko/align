@@ -1,0 +1,27 @@
+<div class="bg-pink bg-height">
+    <div class="container pt-5 d-flex justify-content-between">
+        <div class="items-left">
+            <h2 class="text-white">Centres</h2>
+            
+                <% @centres.each do |centre| %>
+                    <%= link_to centre_path(centre) do %>
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-5">
+                                <%= image_tag "workshop.jpeg", class:'card-img' %>
+                                </div>
+                                <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title"><% centre.name %></h5>
+                                    <p class="card-text">DESCRIPTION HERE</p>
+                                    <p class="card-text"><small class="text-muted"><% centre.location %></small></p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                <% end %>
+            
+        </div>
+    </div>
+</div>
