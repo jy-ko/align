@@ -8,9 +8,18 @@ class WorkshopsController < ApplicationController
   end
 
   def new
+    @workshop = Workshop.new
+    @centres = Centre.all
+    @instructors = Instructor.all
   end
 
   def create
+    @workshop = Workshop.create(workshop_params)
+    if @workshop.save
+      redirect_to workshop_path(@workshop)
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -29,6 +38,6 @@ class WorkshopsController < ApplicationController
   end
 
   def workshop_params
-      params.require(:workshop).permit(:title)
+      params.require(:workshop).permit(:title, :date, :capacity, :centre_id, :instructor_id)
   end
 end
