@@ -31,6 +31,7 @@ gem 'devise-bootstrap-views', '~> 1.0'
 gem 'toastr-rails'
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'pundit'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -61,6 +62,7 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
