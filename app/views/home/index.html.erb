@@ -1,6 +1,11 @@
 <div class="jumbotron">
     <div class="container">
-        <h1 class="text-right mb-4 mr-3">반가워요, 인희님</h1>
+        <% if current_user %>
+         <h1 class="text-right mb-4 mr-3">반가워요, 인희님</h1>
+         <%= link_to 'Sign out', destroy_user_session_path, :method=>:delete %>
+        <% else %>
+         <%= link_to 'Sign up here', new_user_registration_path %>
+        <% end %>
         <!-- Search form -->
         <div class="md-form active-purple-2 mb-3">
         <input class="form-control" type="text" placeholder="Search by topic, location, or centre" aria-label="Search">
