@@ -12,8 +12,6 @@ class WorkshopsController < ApplicationController
   def new
     @workshop = current_user.workshops.new
     authorize @workshop
-    # @centres = Centre.all
-    # @instructors = Instructor.all
   end
 
   def create
