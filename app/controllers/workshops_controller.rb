@@ -2,7 +2,11 @@ class WorkshopsController < ApplicationController
   before_action :set_workshop, only: [:edit, :update, :destroy]
 
   def index
-    @workshops = policy_scope(Workshop)
+    if params[:query].present?
+      @workshops = policy_scope(Workshop).search_by_workshop(params[:query])
+    else
+      @workshops = policy_scope(Workshop)
+    end
   end
 
   def show
