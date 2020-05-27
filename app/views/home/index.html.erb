@@ -7,8 +7,15 @@
          <%= link_to 'Sign up here', new_user_registration_path %>
         <% end %>
         <!-- Search form -->
-        <div class="md-form active-purple-2 mb-3">
-        <input class="form-control" type="text" placeholder="Search by topic, location, or centre" aria-label="Search">
+        <div class="md-form form-inline">
+           <%= form_tag workshops_path, method: :get do %>
+                <%= text_field_tag :query,
+                 params[:query],
+                class: "form-control",
+                placeholder: "Find a workshop"
+             %>
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+            <% end %>
         </div>
         <h3> Popular workshops near you </h3>
         <div class="row">
