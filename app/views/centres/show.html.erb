@@ -2,11 +2,20 @@
     <div class="container pt-5 d-flex">
         <div class="items-left">
             <h2 class="text-white"><%= @centre.name %></h2>
+            <p><%=@centre.location %></p>
             <%= image_tag 'workshop.jpeg' %>
+            <p> Started GET "/centres/1" for ::1 at 2020-05-27 10:43:18 +0900
+            Processing by CentresController#show as HTML
+            Parameters: {"id"=>"1"}
+            User Load (0.6ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2  [["id", 2], ["LIMIT", 1]]
+            ↳ /Users/clareko/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+            Centre Load (4.3ms)  SELECT  "centres".* FROM "centres" WHERE "centres"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+            ↳ app/controllers/centres_controller.rb:9
+            Rendering centres/show.html.erb within layouts/application
+            Rendered centres/show.html.erb within layouts/application (2.1ms)
+            Rendered layouts/_navbar.html.erb (0.6ms) </p>
         </div>
         <div class="items-right">
-            <p><small><%= @centre.location %></small></p>
-            <p> lorem ipsum </p>
         </div>
     </div>
 </div>
