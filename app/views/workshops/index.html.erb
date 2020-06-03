@@ -1,5 +1,5 @@
 <div class="bg-pink bg-height">
-    <div class="container pt-5">
+    <div class="container pt-5 d-flex">
         <div class="items-left">
             <% if params["query"].present? %>
                 <h2 class="text-white">Workshops with keyword <%= params["query"] %>
@@ -34,6 +34,10 @@
                 </div>
             </div>
         </div>
+        <div class="items-right">
+            <% if policy(Workshop).create? %>
+                <%= link_to "Create a new workshop", new_workshop_path %>
+            <% end %>
     </div>
 </div>
 
