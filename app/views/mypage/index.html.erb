@@ -3,7 +3,8 @@
         <div class="items-left">
             <h2 class="text-white">My Page</h2>
             
-                <% @workshops.each do |workshop| %>
+            <p class="text-white">Upcoming workshops</p>
+                <% @my_workshops.each do |workshop| %>
                     <%= link_to workshop_path(workshop) do %>
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
@@ -21,7 +22,7 @@
                         </div>
                     <% end %>
                 <% end %>
-            
+            <%= link_to 'Edit account details', edit_user_registration_path %>
         </div>
     </div>
 </div>

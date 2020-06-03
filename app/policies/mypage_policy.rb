@@ -3,5 +3,9 @@ class MypagePolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+
+    def index?
+      record.user == user
+    end
   end
 end
