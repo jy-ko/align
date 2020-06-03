@@ -17,4 +17,9 @@ class Workshop < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+    def booked?(current_user, workshop_id)
+      Booking.where(["workshop_id = ? and user_id= ? ", "workshop_id", "current_user.id"]).status
+    end
+
 end
