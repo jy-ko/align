@@ -11,7 +11,6 @@ class WorkshopsController < ApplicationController
 
   def show
     @workshop = policy_scope(Workshop).find(params[:id])
-    @current_user = current_user
   end
 
   def new
