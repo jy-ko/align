@@ -18,8 +18,8 @@ class Workshop < ApplicationRecord
       tsearch: { prefix: true }
     }
 
-    def booked?(current_user, workshop_id)
-      Booking.where(["workshop_id = ? and user_id= ? ", "workshop_id", "current_user.id"]).status
+    def booked?(current_user, workshop_i)
+      Booking.where(user_id: current_user.id, workshop_id: workshop_i).exists?
     end
 
 end
