@@ -2,7 +2,6 @@
   <%= f.input :title %>
   <%= f.input :date %>
   <%= f.collection_select :centre_id, Centre.all, :id, :name%>
-  <%= f.collection_select :instructor_id, Instructor.all, :id, :name%>
   <%= f.input :capacity %>
   <%= f.button :submit %>
 <% end %>
