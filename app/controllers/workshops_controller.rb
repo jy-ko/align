@@ -14,12 +14,14 @@ class WorkshopsController < ApplicationController
   end
 
   def new
-    @workshop = current_user.workshops.new
+    @workshop = Workshop.new
+    @workshop.user_id = current_user.id
     authorize @workshop
   end
 
   def create
-    @workshop = current_user.workshops.create(workshop_params)
+    @workshop = Workshop.create(workshop_params)
+    @workshop.user_id = current_user.id
     authorize @workshop
     if @workshop.save
       redirect_to workshop_path(@workshop), notice: 'Workshop was successfully created.'
