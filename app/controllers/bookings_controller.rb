@@ -1,16 +1,18 @@
 class BookingsController < ApplicationController
-
     def create
-        @booking = Booking.new(booking_params)
-        if @booking.status == true
-            #make it unclickable
-        else
-            @booking.status = true
-            #redirect to stripe link
-            notice: 'Your have successfully booked this workshop'
-            redirect_to mypage_index_path
-        end          
+        @booking = Booking.create(booking_params)
+        @workshop = Workshop.find(params[:format])
+        @booking.workshop_id = @workshop.id
+        @booking.user_id = current_user.id
+        if @boooking.save
+            redirect_to workshop_path(@booking.workshop_id)
+        end      
+    end
 
+    private
+
+    def booking_params
+        params.require(:booking).permit(:workshop_id, :user_id)
     end
 
 end

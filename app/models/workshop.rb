@@ -1,6 +1,6 @@
 class Workshop < ApplicationRecord
   belongs_to :centre
-
+  has_many :bookings
   validates :capacity, presence: true
   validates :centre_id, presence: true
   validates :date, presence: true
