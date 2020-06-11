@@ -1,10 +1,9 @@
 <div class="bg-pink bg-height">
-    <div class="container pt-5 d-flex justify-content-between">
+    <div class="container pt-5 justify-content-between">
         <div class="items-left">
             <h2 class="text-white">My Page</h2>
-            
             <p class="text-white">Upcoming workshops</p>
-                <% @my_workshops.each do |workshop| %>
+                <% @my_bookings.each do |workshop| %>
                     <%= link_to workshop_path(workshop) do %>
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
@@ -24,5 +23,30 @@
                 <% end %>
             <%= link_to 'Edit account details', edit_user_registration_path %>
         </div>
+        <div>
+            <h2 class="text-white">My Centre</h2>
+            <% if policy(Workshop).create? %>
+                <%= link_to "Create a new workshop", new_workshop_path %>
+            <% end %>
+            <% @my_workshops.each do |workshop| %>
+                    <%= link_to workshop_path(workshop) do %>
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-5">
+                                <%= image_tag "workshop.jpeg", class:'card-img' %>
+                                </div>
+                                <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title"><% workshop.title %></h5>
+                                    <p class="card-text">DESCRIPTION HERE</p>
+                                    <p class="card-text"><small class="text-muted"><% workshop.centre.location %></small></p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                <% end %>
+        </div>
     </div>
+
 </div>

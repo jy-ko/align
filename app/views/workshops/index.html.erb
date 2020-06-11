@@ -16,7 +16,7 @@
                                 </div>
                                 <div class="col-md-7">
                                     <div class="card-body">
-                                        <h5 class="card-title"><%= workshop.title%></h5>
+                                        <h5 class="card-title"><%= workshop.title %></h5>
                                         <p class="card-text"><small class="text-muted"><%= workshop.centre.location %></small></p>
                                     </div>
                                 </div>
@@ -25,19 +25,5 @@
                     <% end %>
                 <% end %> 
         </div>
-        <div class="items-right">
-            <h2 class="text-white">Suggestions</h2>
-            <div class="card">
-                <%= image_tag "workshop.jpeg", class:'card-img-top' %>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                </div>
-            </div>
-        </div>
-        <div class="items-right">
-            <% if policy(Workshop).create? %>
-                <%= link_to "Create a new workshop", new_workshop_path %>
-            <% end %>
-    </div>
 </div>
 

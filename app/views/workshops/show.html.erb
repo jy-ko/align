@@ -9,9 +9,11 @@
             <% if @workshop.booked?(current_user, @workshop.id) %>
                 <div class="btn btn-warning-outline">Booked</div>
             <% elsif @workshop.user_id == current_user.id %>
-                <div class="btn btn-warning-outline">Edit the workshop</div>
+                <div class="btn btn-warning-outline">
+                    <%= link_to "Edit the workshop", edit_workshop_path(@workshop) %> 
+                </div>
             <% else %>
-                <div class="btn btn-primary-outline"><%= link_to 'Book this now'%></div>
+                <div class="btn btn-primary-outline"><%= link_to 'Book this now', bookings_path(@workshop.id), method: :post %></div>
             <% end %>
         </div>
         <div class="items-right"> 
